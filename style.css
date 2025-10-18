@@ -5,23 +5,23 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  user-select: none; /* Prevent text selection */
+  user-select: none;
 }
 
 body {
-  background-color: #100000; /* Dark base */
+  background-color: #100000;
   color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* --- Header --- */
+/* Header */
 header {
   text-align: center;
   padding: 30px 20px;
   background-color: #1c0000;
-  border-bottom: 2px solid #ff4d4d; /* main red */
+  border-bottom: 2px solid #ff4d4d;
 }
 
 .title-container {
@@ -35,7 +35,7 @@ header {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 2px solid #ff4d4d; /* harmonized */
+  border: 2px solid #ff4d4d;
   animation: pulseGlow 2.5s infinite ease-in-out, rotate 12s linear infinite;
 }
 
@@ -62,13 +62,13 @@ h1 {
   100% { text-shadow: 0 0 12px #ff4d4d, 0 0 22px #ff8080; }
 }
 
-/* --- Search Bar --- */
+/* Search Bar */
 #searchInput {
   margin-top: 20px;
   padding: 12px 20px;
   width: 60%;
   max-width: 400px;
-  border: 1px solid #ff4d4d; /* harmonized */
+  border: 1px solid #ff4d4d;
   border-radius: 25px;
   font-size: 1rem;
   outline: none;
@@ -77,21 +77,16 @@ h1 {
   transition: all 0.3s ease;
 }
 
-#searchInput::placeholder {
-  color: #ff9999;
-}
+#searchInput::placeholder { color: #ff9999; }
 
 #searchInput:focus {
-  border-color: #ff8080; /* lighter red on focus */
+  border-color: #ff8080;
   background-color: #2b0000;
   box-shadow: 0 0 15px #ff8080;
 }
 
-/* --- Commands Grid --- */
-main {
-  flex: 1;
-  padding: 40px 10%;
-}
+/* Commands Grid */
+main { flex: 1; padding: 40px 10%; }
 
 .command-grid {
   display: grid;
@@ -101,7 +96,7 @@ main {
 
 .command-card {
   background-color: #1a0000;
-  border: 2px solid #ff4d4d; /* harmonized with header/logo */
+  border: 2px solid #ff4d4d;
   border-radius: 12px;
   padding: 20px;
   text-align: center;
@@ -115,7 +110,7 @@ main {
 .command-card:hover {
   transform: translateY(-5px) scale(1.03);
   background-color: #250000;
-  border-color: #ff8080; /* hover lighter red */
+  border-color: #ff8080;
 }
 
 @keyframes cardEntrance {
@@ -130,11 +125,7 @@ main {
   animation: glowText 2s infinite alternate;
 }
 
-.command-card p {
-  font-size: 0.95rem;
-  color: #ffcccc;
-  margin: 5px 0;
-}
+.command-card p { font-size: 0.95rem; color: #ffcccc; margin: 5px 0; }
 
 .command-card code {
   background-color: #2b0000;
@@ -144,7 +135,7 @@ main {
   border: 1px solid #ff4d4d;
 }
 
-/* --- Footer --- */
+/* Footer */
 footer {
   text-align: center;
   padding: 15px;
