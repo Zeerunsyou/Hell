@@ -10,7 +10,7 @@ const commands = [
   { name: "antodeletelist", category: "Moderation", description: "Show all channels and what is being auto-deleted.", usage: "`antideletelist" },
   { name: "autodeletewhitelist", category: "Moderation", description: "Whitelist a user from being auto-deleted", usage: "`autodeletewhitelist @user" },
   { name: "automessage", category: "Moderation", description: "Send automated embeds at a set interval in a specific channel", usage: "`automessage <triple-quoted JSON embed> <interval_in_seconds> <channel_id>" },
-  { name: "autoreact", category: "Moderation", description: "Add/Remove Autoreactions for users.", usage: "`autoreact add <userId> <emoji> OR `autoreact remove <userId> <emoji>" },
+  { name: "autoreact", category: "Moderation", description: "Add/Remove Autoreactions for users.", usage: "`autoreact <add/remove> <userId> <emoji>" },
   { name: "autoreactlist", category: "Moderation", description: "List autoreactions that users have.", usage: "`autoreactlist" },
   { name: "banner", category: "User", description: "Displays a user's banner.", usage: "`banner @user" },
   { name: "calc", category: "Fun", description: "Calculate a math expression", usage: "`calc <expression>" },
@@ -82,5 +82,6 @@ searchInput.addEventListener("input", () => {
   );
   displayCommands(filtered);
 });
+
 
 
