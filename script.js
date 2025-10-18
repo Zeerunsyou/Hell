@@ -75,10 +75,8 @@ function displayCommands(list) {
   });
 }
 
-// Initial display
 displayCommands(commands);
 
-// Search filter
 searchInput.addEventListener("input", () => {
   const query = searchInput.value.toLowerCase();
   const filtered = commands.filter(cmd =>
@@ -88,6 +86,7 @@ searchInput.addEventListener("input", () => {
   );
   displayCommands(filtered);
 });
+
 
 
 
