@@ -23,7 +23,7 @@ const commands = [
   { name: "code2embed", category: "Moderation", description: "Convert JSON code to an embed", usage: "`code2embed <JSON>" },
   { name: "create", category: "Moderation", description: "Create a Text Channel, Voice Channel, or Category", usage: "`create <channel/category> <vc/text> <categoryId or none> <name>" },
   { name: "cs", category: "Moderation", description: "Clear sniped messages.", usage: "`cs" },
-  { name: "delete", category: "Moderation", description: "Delete a Channel or Category.", usage: "`delete (channel/category ID)" },
+  { name: "delete", category: "Moderation", description: "Delete a Channel or Category.", usage: "`delete <channel/category ID>" },
   { name: "embed2code", category: "Moderation", description: "Converts an Embed into JSON code", usage: "`code2embed <reply to embed message>" },
   { name: "es", category: "Moderation", description: "Snipes edited messages. Use es, es 1, es 2, etc.", usage: "`es <number>" },
   { name: "fn", category: "Moderation", description: "Change a users nickname in a server", usage: "`fn <user> [nickname]" },
@@ -88,6 +88,7 @@ searchInput.addEventListener("input", () => {
   );
   displayCommands(filtered);
 });
+
 
 
 
