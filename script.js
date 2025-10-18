@@ -1,18 +1,15 @@
+import rawCommands from "./commands.json" assert { type: "json" };
+
 const container = document.getElementById("commands-container");
 const searchInput = document.getElementById("searchInput");
-let commands = [];
 
-// Load commands from JSON
-async function loadCommands() {
-  try {
-    const res = await fetch("commands.json");
-    commands = await res.json();
-    displayCommands(commands);
-  } catch (err) {
-    container.innerHTML = "<p>⚠️ Failed to load commands.</p>";
-    console.error("Error loading commands:", err);
-  }
-}
+// Convert JSON keys into an array of command objects
+const commands = Object.keys(rawCommands).map(name => ({
+  name,
+  category: "General",      // You can customize later
+  description: "No description yet.",
+  usage: `/${name}`
+}));
 
 function displayCommands(list) {
   container.innerHTML = "";
@@ -29,6 +26,10 @@ function displayCommands(list) {
   });
 }
 
+// Initial display
+displayCommands(commands);
+
+// Search filter
 searchInput.addEventListener("input", () => {
   const query = searchInput.value.toLowerCase();
   const filtered = commands.filter(cmd =>
@@ -38,6 +39,3 @@ searchInput.addEventListener("input", () => {
   );
   displayCommands(filtered);
 });
-
-// Run it
-loadCommands();
