@@ -1,0 +1,44 @@
+[
+  {
+    "name": "ping",
+    "category": "General",
+    "description": "Checks the bot’s latency and responsiveness.",
+    "usage": "/ping"
+  },
+  {
+    "name": "ban",
+    "category": "Moderation",
+    "description": "Bans a specified user from the server.",
+    "usage": "/ban @user [reason]"
+  },
+  {
+    "name": "kick",
+    "category": "Moderation",
+    "description": "Kicks a user out of the server.",
+    "usage": "/kick @user [reason]"
+  },
+  {
+    "name": "massban",
+    "category": "Moderation",
+    "description": "Bans multiple users using an uploaded list of IDs.",
+    "usage": "/massban [file.txt]"
+  },
+  {
+    "name": "verify",
+    "category": "Utility",
+    "description": "Verifies a member and grants them a role.",
+    "usage": "/verify"
+  },
+  {
+    "name": "userinfo",
+    "category": "Utility",
+    "description": "Displays information about a user.",
+    "usage": "/userinfo @user"
+  },
+  {
+    "name": "translate",
+    "category": "Fun",
+    "description": "Translates text into the selected language.",
+    "usage": "/translate [text] [language]"
+  }
+]

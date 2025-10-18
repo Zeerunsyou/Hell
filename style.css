@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  user-select: none; /* Prevent text selection */
+}
+
+body {
+  background-color: #100000; /* Dark base */
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Header --- */
+header {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #1c0000;
+  border-bottom: 2px solid #ff4d4d; /* main red */
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #ff4d4d; /* harmonized */
+  animation: pulseGlow 2.5s infinite ease-in-out, rotate 12s linear infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px #ff4d4d; transform: scale(1); }
+  50% { box-shadow: 0 0 50px #ff8080; transform: scale(1.15); }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ff4d4d;
+  animation: glowText 2s infinite alternate;
+}
+
+@keyframes glowText {
+  0% { text-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff8080; }
+  50% { text-shadow: 0 0 15px #ff6666, 0 0 25px #ff9999; }
+  100% { text-shadow: 0 0 12px #ff4d4d, 0 0 22px #ff8080; }
+}
+
+/* --- Search Bar --- */
+#searchInput {
+  margin-top: 20px;
+  padding: 12px 20px;
+  width: 60%;
+  max-width: 400px;
+  border: 1px solid #ff4d4d; /* harmonized */
+  border-radius: 25px;
+  font-size: 1rem;
+  outline: none;
+  background-color: #1a0000;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+#searchInput::placeholder {
+  color: #ff9999;
+}
+
+#searchInput:focus {
+  border-color: #ff8080; /* lighter red on focus */
+  background-color: #2b0000;
+  box-shadow: 0 0 15px #ff8080;
+}
+
+/* --- Commands Grid --- */
+main {
+  flex: 1;
+  padding: 40px 10%;
+}
+
+.command-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.command-card {
+  background-color: #1a0000;
+  border: 2px solid #ff4d4d; /* harmonized with header/logo */
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+  animation: cardEntrance 0.5s ease forwards;
+}
+
+.command-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  background-color: #250000;
+  border-color: #ff8080; /* hover lighter red */
+}
+
+@keyframes cardEntrance {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.command-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #ffb3b3;
+  animation: glowText 2s infinite alternate;
+}
+
+.command-card p {
+  font-size: 0.95rem;
+  color: #ffcccc;
+  margin: 5px 0;
+}
+
+.command-card code {
+  background-color: #2b0000;
+  padding: 4px 6px;
+  border-radius: 5px;
+  font-family: monospace;
+  border: 1px solid #ff4d4d;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #1c0000;
+  border-top: 2px solid #ff4d4d;
+  color: #ff9999;
+  font-size: 0.9rem;
+  user-select: none;
+}
