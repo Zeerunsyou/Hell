@@ -1,15 +1,7 @@
-import rawCommands from "./commands.json" assert { type: "json" };
+import commands from "./commands.js";
 
 const container = document.getElementById("commands-container");
 const searchInput = document.getElementById("searchInput");
-
-// Convert JSON keys into an array of command objects
-const commands = Object.keys(rawCommands).map(name => ({
-  name,
-  category: "General",      // You can customize later
-  description: "No description yet.",
-  usage: `/${name}`
-}));
 
 function displayCommands(list) {
   container.innerHTML = "";
