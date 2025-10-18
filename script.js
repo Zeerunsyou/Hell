@@ -11,12 +11,15 @@ const commands = [
   { name: "autodelete", category: "Moderation", description: "Toggle automatic deletion of messages or embeds in a channel.", usage: "`autodelete <message/embeds>" },
   { name: "antodeleteclear", category: "Moderation", description: "Stops auto-deleting messages/embeds in the channel.", usage: "`antodeleteclear" },
   { name: "antodeletelist", category: "Moderation", description: "Show all channels and what is being auto-deleted.", usage: "`antideletelist" },
+  { name: "autoleave", category: "Moderation", description: "Automatically send a embed to a channel when a member leaves the server.", usage: "`autoleave #channel" },
   { name: "autodeletewhitelist", category: "Moderation", description: "Whitelist a user from being auto-deleted", usage: "`autodeletewhitelist @user" },
   { name: "automessage", category: "Moderation", description: "Send automated embeds at a set interval in a specific channel", usage: "`automessage <triple-quoted JSON embed> <seconds> <channel_id>" },
   { name: "autoreact add", category: "Moderation", description: "Add Autoreactions for users.", usage: "`autoreact add <userId> <emoji>" },
   { name: "autoreact remove", category: "Moderation", description: "Remove Autoreactions for users.", usage: "`autoreact remove <userId> <emoji>" },
   { name: "autoreactlist", category: "Moderation", description: "List autoreactions that users have.", usage: "`autoreactlist" },
+  { name: "autoreactlist", category: "Moderation", description: "Automatically send a embed to a channel when a member joins the server.", usage: "`autowelcome #channel" },
   { name: "banner", category: "User", description: "Displays a user's banner.", usage: "`banner @user" },
+  { name: "boostnotify", category: "Moderation", description: "Automatically send a message to a channel when a member boosts the server", usage: "`boostnotify #channel" },
   { name: "calc", category: "Fun", description: "Calculate a math expression", usage: "`calc <expression>" },
   { name: "clear", category: "Moderation", description: "Clear bot and user's command messages", usage: "`clear" },
   { name: "cmds", category: "Moderation", description: "View a list of the bot's commands", usage: "`cmds" },
@@ -86,6 +89,7 @@ searchInput.addEventListener("input", () => {
   );
   displayCommands(filtered);
 });
+
 
 
 
